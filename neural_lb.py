@@ -32,7 +32,7 @@ y = tf.placeholder(tf.float32, [None, 1], name="y")
 
 # скрытый слой
 nn = tf.layers.dense(x, hiddenSize,
-                     activation=tf.nn.sigmoid,
+                     activation=tf.nn.softmax,
                      kernel_initializer=tf.initializers.ones(),
                      bias_initializer=tf.initializers.random_uniform(minval=-x1, maxval=-x0),
                      name="hidden")
